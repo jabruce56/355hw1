@@ -37,9 +37,9 @@ def histo(s):
     return collections.OrderedDict(sorted(dict.items(), key=lambda t: t[1], reverse=True))
     pass
 def testhisto(s):
-    test1 = 'implemented'
+    #test1 = 'implemented'
 
-    print(histo(test1))
+    print(histo(s))
 testhisto('test stuff')
 
 #dictionary = maketable("abcdefg", "gfedcba")
