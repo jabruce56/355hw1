@@ -1,3 +1,5 @@
+#Jesse Bruce
+#cs355 HW1
 import collections
 def maketable(s1, s2):
     dict = {}
@@ -40,6 +42,7 @@ def testhisto(s):
     #test1 = 'implemented'
 
     print(histo(s))
+
 def digraphs(s):
     dict = {}
     i = 0
@@ -55,8 +58,18 @@ def digraphs(s):
             i = i+1
         else:
             i=i+1
-    sortdi= collections.OrderedDict(sorted(dict.keys(), key=lambda t:t[1]))
+    return collections.OrderedDict(sorted(dict.items(), key=lambda t:t[0]))
+    pass
+if __name__ == '__main__':
+    passedMsg = "%s passed"
+    failedMsg = "%s failed"
+    if testtrans():
+        print(passedMsg % 'testtrans')
+    else:
+        print(failedMsg % 'testtrans')
 
+
+testhisto("test and more testing")
 digraphs("stuff and things plus more words and test with fries and a large coke")
 #dictionary = maketable("abcdefg", "gfedcba")
 #print(dictionary)
