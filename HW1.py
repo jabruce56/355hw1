@@ -40,8 +40,24 @@ def testhisto(s):
     #test1 = 'implemented'
 
     print(histo(s))
-testhisto('test stuff')
+def digraphs(s):
+    dict = {}
+    i = 0
+    while i < len(s):
+        if i+1<len(s):
+            n1 = s[i]
+            n2 = s[i+1]
+            n = '/'+n1+n2+'/'
+            if n in dict:
+                dict[n]=dict.get(n,0)+1
+            else:
+                dict.update({n:1})
+            i = i+1
+        else:
+            i=i+1
+    sortdi= collections.OrderedDict(sorted(dict.keys(), key=lambda t:t[1]))
 
+digraphs("stuff and things plus more words and test with fries and a large coke")
 #dictionary = maketable("abcdefg", "gfedcba")
 #print(dictionary)
 
